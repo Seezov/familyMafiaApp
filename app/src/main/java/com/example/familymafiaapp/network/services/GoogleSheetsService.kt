@@ -12,7 +12,8 @@ interface GoogleSheetsService {
     fun getPlayers(
         @Path("sheetId") sheetId: String = BASE_SHEET_ID,
         @Path("range") range: String,
-        @Query("key") key: String = BASE_SHEET_KEY
+        @Query("key") key: String = BASE_SHEET_KEY,
+        @Query("majorDimension") majorDimension: String?
     ) : Call<GoogleSheetResponse>
 
     companion object {

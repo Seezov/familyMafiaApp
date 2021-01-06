@@ -2,6 +2,7 @@ package com.example.familymafiaapp.repositories
 
 import android.util.Log
 import com.example.familymafiaapp.enums.SheetData
+import com.example.familymafiaapp.enums.SheetData.PLAYERS
 import com.example.familymafiaapp.network.ApiClient
 import com.example.familymafiaapp.network.responses.GoogleSheetResponse
 import retrofit2.Call
@@ -15,7 +16,8 @@ class GameRepository @Inject internal constructor(
 
     fun getPlayers() {
         apiClient.googleSheetsService.getPlayers(
-            range = SheetData.PLAYERS.range,
+            range = PLAYERS.range,
+            majorDimension = PLAYERS.majorDimension
         ).enqueue(object : Callback<GoogleSheetResponse> {
             override fun onResponse(
                 call: Call<GoogleSheetResponse>,
