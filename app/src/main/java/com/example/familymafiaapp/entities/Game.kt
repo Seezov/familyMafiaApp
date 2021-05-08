@@ -1,5 +1,8 @@
 package com.example.familymafiaapp.entities
 
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class Game(
     val winner: String,
     val firstKilled: Int,

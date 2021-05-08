@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Family Mafia App</string>
+    <string name="complex_range">Игры!%1$s:%2$s</string>
 </resources>

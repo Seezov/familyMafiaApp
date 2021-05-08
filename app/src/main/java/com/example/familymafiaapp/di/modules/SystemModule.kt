@@ -2,6 +2,7 @@ package com.example.familymafiaapp.di.modules
 
 import android.app.Application
 import com.example.familymafiaapp.FamilyMafiaApp
+import com.example.familymafiaapp.coroutines.CoroutineDispatchersProvider
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -23,4 +24,8 @@ class SystemModule {
     @Provides
     @Singleton
     fun provideMoshi(): Moshi = moshi
+
+    @Provides
+    @Singleton
+    fun provideCoroutineDispatchersProvider() = CoroutineDispatchersProvider()
 }

@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface GoogleSheetsService {
 
     @GET("{sheetId}/values/{range}")
-    fun getPlayers(
+    fun getSheetData(
         @Path("sheetId") sheetId: String = BASE_SHEET_ID,
         @Path("range") range: String,
         @Query("key") key: String = BASE_SHEET_KEY,
